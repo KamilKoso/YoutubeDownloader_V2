@@ -1,0 +1,17 @@
+<ngx-loading-bar height="3px" color="black"></ngx-loading-bar>
+<app-navbar></app-navbar>
+
+<div class="margin-top-100">
+  <router-outlet></router-outlet>
+</div>
+
+<button
+  mat-icon-button
+  class="theme-change-toggle"
+  (click)="changeTheme(currentTheme === 'dark-theme')"
+  *ngIf="_themeService.theme$ | async as currentTheme"
+>
+  <mat-icon>
+    {{ currentTheme === "light-theme" ? "brightness_4" : "brightness_7" }}
+  </mat-icon>
+</button>

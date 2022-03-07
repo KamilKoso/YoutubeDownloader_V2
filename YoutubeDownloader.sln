@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31612.314
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader.Api", "YoutubeDownloader.Api\YoutubeDownloader.Api.csproj", "{758BA3FD-AC4B-42A2-8CD6-A7909827A413}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader.Web", "YoutubeDownloader.Web\YoutubeDownloader.Web.csproj", "{4844FF0F-42F2-4A98-B349-A34BF87688AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader.Infrastructure", "YoutubeDownloader.Infrastructure\YoutubeDownloader.Infrastructure.csproj", "{88CFD398-F345-46F9-8FD4-D1606841981E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader.Domain", "YoutubeDownloader.Domain\YoutubeDownloader.Domain.csproj", "{4356EB43-3CB4-45FA-90E3-89F2253DBDC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader.Common", "YoutubeDownloader.Common\YoutubeDownloader.Common.csproj", "{93552137-36E2-4EEF-B469-76F5192A5BFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader.IdentityServer", "YoutubeDownloader.IdentityServer\YoutubeDownloader.IdentityServer.csproj", "{ACC4CD97-73DF-4975-A93F-7FE657A89417}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{96C461E0-1BB2-4E90-B96C-92EDFB71D284}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader.Domain.Tests", "YoutubeDownloader.Domain.Tests\YoutubeDownloader.Domain.Tests.csproj", "{9191597A-E4C7-4797-966A-6E7A0AC58042}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader.Integration.Tests", "YoutubeDownloader.Integration.Tests\YoutubeDownloader.Integration.Tests.csproj", "{B6FA49CC-9490-4845-950A-CDE8C44D6183}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader.Application", "YoutubeDownloader.Application\YoutubeDownloader.Application.csproj", "{3AC2E1A4-3076-472B-9C15-6C4FF4564FE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{758BA3FD-AC4B-42A2-8CD6-A7909827A413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758BA3FD-AC4B-42A2-8CD6-A7909827A413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758BA3FD-AC4B-42A2-8CD6-A7909827A413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758BA3FD-AC4B-42A2-8CD6-A7909827A413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4844FF0F-42F2-4A98-B349-A34BF87688AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4844FF0F-42F2-4A98-B349-A34BF87688AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4844FF0F-42F2-4A98-B349-A34BF87688AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4844FF0F-42F2-4A98-B349-A34BF87688AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CFD398-F345-46F9-8FD4-D1606841981E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CFD398-F345-46F9-8FD4-D1606841981E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CFD398-F345-46F9-8FD4-D1606841981E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CFD398-F345-46F9-8FD4-D1606841981E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4356EB43-3CB4-45FA-90E3-89F2253DBDC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4356EB43-3CB4-45FA-90E3-89F2253DBDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4356EB43-3CB4-45FA-90E3-89F2253DBDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4356EB43-3CB4-45FA-90E3-89F2253DBDC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93552137-36E2-4EEF-B469-76F5192A5BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93552137-36E2-4EEF-B469-76F5192A5BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93552137-36E2-4EEF-B469-76F5192A5BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93552137-36E2-4EEF-B469-76F5192A5BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACC4CD97-73DF-4975-A93F-7FE657A89417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC4CD97-73DF-4975-A93F-7FE657A89417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC4CD97-73DF-4975-A93F-7FE657A89417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC4CD97-73DF-4975-A93F-7FE657A89417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9191597A-E4C7-4797-966A-6E7A0AC58042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9191597A-E4C7-4797-966A-6E7A0AC58042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9191597A-E4C7-4797-966A-6E7A0AC58042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9191597A-E4C7-4797-966A-6E7A0AC58042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FA49CC-9490-4845-950A-CDE8C44D6183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FA49CC-9490-4845-950A-CDE8C44D6183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FA49CC-9490-4845-950A-CDE8C44D6183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FA49CC-9490-4845-950A-CDE8C44D6183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC2E1A4-3076-472B-9C15-6C4FF4564FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC2E1A4-3076-472B-9C15-6C4FF4564FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC2E1A4-3076-472B-9C15-6C4FF4564FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC2E1A4-3076-472B-9C15-6C4FF4564FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9191597A-E4C7-4797-966A-6E7A0AC58042} = {96C461E0-1BB2-4E90-B96C-92EDFB71D284}
+		{B6FA49CC-9490-4845-950A-CDE8C44D6183} = {96C461E0-1BB2-4E90-B96C-92EDFB71D284}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76E5C602-2ED9-4187-A513-D779D98641DD}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,50 @@
+<mat-card class="mat-elevation-z8">
+  <div class="d-flex justify-content-around align-items-center">
+    <mat-form-field class="w-90">
+      <mat-label>Paste youtube video url here</mat-label>
+      <input matInput type="text" [formControl]="videoUrl" />
+      <mat-error>
+        <app-validation-feedback
+          [control]="videoUrl"
+          [customValidationMessages]="videoUrlValidationMessage"
+        ></app-validation-feedback>
+      </mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      class="grab-video-btn"
+      color="accent"
+      (click)="videoUrl$.next(videoUrl.value)"
+      [disabled]="(isVideoProcessing$ | async) === true || (videoUrl.invalid && videoUrl.touched)"
+    >
+      Convert
+    </button>
+  </div>
+  <div class="video-metadata" *ngIf="videoMetadata$ | async as videoMetadata">
+    <app-video-preview class="video-preview" [videoMetadata]="videoMetadata"></app-video-preview>
+    <div class="media-type-select-container">
+      <app-media-type-select
+        class="media-type-select"
+        [videoQualityLabels]="videoMetadata.videoQualityLabels"
+        [bitratesKilobytesPerSecond]="videoMetadata.bitratesKilobytesPerSecond"
+        (mediaTypeSelected)="processMediaTypeRequest($event, videoMetadata.author, videoMetadata.title)"
+        [videoIsProcessing]="(isVideoProcessing$ | async)!"
+      ></app-media-type-select>
+      <progress-bar
+        *ngIf="this.progress$ | async as progress"
+        class="w-100 mt-4"
+        [progress]="progress * 100"
+        progressBarText="Processing finished, your download will begin shortly."
+        height="30px"
+        [mode]="progress === 1 ? 'text' : 'percent'"
+      ></progress-bar>
+    </div>
+  </div>
+
+  <div class="video-metadata" *ngIf="isLoading$ | async">
+    <app-video-preview-skeleton-loader class="video-preview"></app-video-preview-skeleton-loader>
+    <div class="media-type-select-container">
+      <app-media-type-select-skeleton-loader class="media-type-select"></app-media-type-select-skeleton-loader>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,24 @@
+<div class="video-preview">
+  <div class="video-thumbnail-wrapper">
+    <a [href]="videoMetadata.videoUrl" target="_blank">
+      <img [src]="videoMetadata.thumbnailUrl" class="video-thumbnail" />
+      <span class="video-duration">{{ formatDuration(videoMetadata.duration) }}</span>
+    </a>
+  </div>
+  <div class="video-details">
+    <a [href]="videoMetadata.videoUrl" class="video-title" target="_blank">
+      {{ videoMetadata.title }}
+    </a>
+    <div class="d-flex">
+      <a
+        class="video-author mr-2"
+        [href]="'https://www.youtube.com/channel/' + videoMetadata.channelId"
+        target="_blank"
+        >{{ videoMetadata.author }}</a
+      >
+      <span>
+        {{ formatViews(videoMetadata.views) }}
+      </span>
+    </div>
+  </div>
+</div>

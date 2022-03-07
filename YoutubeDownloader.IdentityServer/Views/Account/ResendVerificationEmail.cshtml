@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model YoutubeDownloader.IdentityServer.Models.ResendVerificationEmailModel
+
+<div>
+    <h1>Account not verified</h1>
+
+    <form asp-action="ResendVerificationEmail" autocomplete="off">
+        <div class="w-60">
+         <p>Please click on the link that has been sent to your email account to verify your email.</p>
+         <p>Check your spam inbox if you can't find the mail.</p>
+         <p>If you still can't find it, we can resent it.</p>
+		</div>
+      
+       
+        @Html.HiddenFor(m => m.Email)
+        <div class="mt-4 mb-4">
+            <button class="btn btn-primary" disabled=@Model.ResendRequested>Resend mail</button>
+        </div>
+
+        @if(Model.ResendRequested) {
+            <strong>Verification email has been sent. Check your email.</strong>
+        }
+    </form>
+</div>

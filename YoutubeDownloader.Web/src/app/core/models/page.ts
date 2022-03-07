@@ -1,0 +1,6 @@
+export interface Page<T> {
+    totalCount: number;
+    pageNumber: number;
+    pageSize: number;
+    items: Array<T>;
+}

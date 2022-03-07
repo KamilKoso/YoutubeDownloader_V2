@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="Ensure.That" Version="10.1.0" />
+    <PackageReference Include="NWebsec.AspNetCore.Middleware" Version="3.0.0" />
+  </ItemGroup>
+
+</Project>

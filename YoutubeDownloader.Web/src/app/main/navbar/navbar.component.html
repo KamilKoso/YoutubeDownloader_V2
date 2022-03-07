@@ -1,0 +1,45 @@
+<mat-toolbar class="navbar mat-elevation-z8">
+  <a class="nav-title" routerLink="/"> <fa-icon [icon]="faYoutube" class="accent"></fa-icon> Downloader</a>
+
+  <span class="fill-remaining-space"></span>
+
+  <div class="menu">
+    <nav *ngIf="(authStatus$ | async) === false">
+      <a mat-button routerLinkActive="menu-item-active" (click)="login()"> <mat-icon>person</mat-icon> Login </a>
+      <a mat-button routerLinkActive="menu-item-active" routerLink="/register">
+        <mat-icon>person_add</mat-icon> Register
+      </a>
+    </nav>
+
+    <nav *ngIf="authStatus$ | async">
+      <a mat-button routerLinkActive="menu-item-active" routerLink="/history"> <mat-icon>history</mat-icon> History </a>
+      <a mat-button routerLinkActive="menu-item-active" (click)="manageAccount()">
+        <mat-icon>account_circle</mat-icon> Manage Account
+      </a>
+      <a mat-button routerLinkActive="menu-item-active" (click)="signout()">
+        <mat-icon>exit_to_app</mat-icon> Signout {{ getUserName() }}
+      </a>
+    </nav>
+  </div>
+  <button mat-icon-button class="menu-mobile" [matMenuTriggerFor]="mobileMenu"><mat-icon>more_vert</mat-icon></button>
+
+  <mat-menu #mobileMenu="matMenu">
+    <ng-container *ngIf="(authStatus$ | async) === false">
+      <a mat-menu-item routerLinkActive="menu-item-active" (click)="login()"> <mat-icon>person</mat-icon> Login </a>
+      <a mat-menu-item routerLinkActive="menu-item-active" routerLink="/register">
+        <mat-icon>person_add</mat-icon> Register
+      </a>
+    </ng-container>
+    <ng-container *ngIf="authStatus$ | async">
+      <a mat-menu-item routerLinkActive="menu-item-active" routerLink="/history">
+        <mat-icon>history</mat-icon> History
+      </a>
+      <a mat-menu-item routerLinkActive="menu-item-active" (click)="manageAccount()">
+        <mat-icon>account_circle</mat-icon> Manage Account
+      </a>
+      <a mat-menu-item routerLinkActive="menu-item-active" (click)="signout()">
+        <mat-icon>exit_to_app</mat-icon> Signout {{ getUserName() }}
+      </a>
+    </ng-container>
+  </mat-menu>
+</mat-toolbar>

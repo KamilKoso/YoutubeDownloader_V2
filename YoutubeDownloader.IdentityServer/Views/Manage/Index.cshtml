@@ -1,0 +1,19 @@
+﻿@model YoutubeDownloader.IdentityServer.Models.IndexViewModel
+
+<partial name="_ValidationSummary" />
+@if (!string.IsNullOrEmpty(ViewBag.message))
+{
+    <div class="alert alert-success">
+        <strong>Success!</strong>
+        @ViewBag.message
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" readonly />
+            </div>
+    </div>
+</div>

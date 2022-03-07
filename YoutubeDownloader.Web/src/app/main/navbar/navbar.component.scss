@@ -1,0 +1,33 @@
+@import "variables";
+$mobile-breakpoint: "700px";
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.nav-title {
+  color: inherit;
+  text-decoration: none;
+  margin-left: 25px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menu {
+  display: block;
+  @media only screen and (max-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+
+.menu-mobile {
+  display: none;
+  @media only screen and (max-width: $mobile-breakpoint) {
+    display: block;
+  }
+}

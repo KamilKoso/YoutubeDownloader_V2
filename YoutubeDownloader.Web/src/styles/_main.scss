@@ -1,0 +1,116 @@
+@import "variables";
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  height: 56px !important;
+}
+
+mat-card {
+  max-width: 80%;
+  margin: 2em auto;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.margin {
+  &-top {
+    &-25 {
+      margin-top: 25px;
+    }
+
+    &-100 {
+      margin-top: 100px;
+    }
+  }
+}
+
+.small-info-page {
+  padding: 15px 1rem;
+
+  mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }
+}
+
+.menu-item-active {
+  border-bottom: 3px solid !important;
+}
+
+.accent {
+  color: $accent;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.mat-select-panel,
+body {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 3px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 3px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($primary, 20);
+  }
+}
+
+.tooltip-medium {
+  font-size: 14px;
+}
+
+mat-tab-group.sticky {
+  .mat-tab-header {
+    width: 100vw;
+    z-index: 999;
+    position: fixed !important;
+  }
+}

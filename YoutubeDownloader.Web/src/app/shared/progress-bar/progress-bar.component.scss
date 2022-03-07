@@ -1,0 +1,44 @@
+@import "variables";
+
+.progress-bar-wrapper {
+  position: relative;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  border-radius: 5px;
+
+  background-image: linear-gradient(45deg, red, 45deg, red);
+}
+
+.percentage {
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+::ng-deep .light-theme {
+  .progress-bar-wrapper {
+    background-color: $primary-light;
+  }
+
+  .progress-bar {
+    background-color: $primary-dark;
+  }
+}
+
+::ng-deep .dark-theme {
+  .progress-bar-wrapper {
+    background-color: $primary-dark;
+  }
+
+  .progress-bar {
+    background-color: $background-dark;
+  }
+}

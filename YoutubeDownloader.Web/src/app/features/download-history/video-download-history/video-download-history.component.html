@@ -1,0 +1,23 @@
+<div [scrollOffsetPercentage]="80" (windowScrollOffset)="scrollOffsetHit()">
+  <mat-card *ngFor="let videoHistory of videoHistory$ | async" class="history-grid">
+    <app-video-preview [videoMetadata]="videoHistory.videoMetadata" class="video-preview"></app-video-preview>
+    <div class="ml-auto">
+      <p class="download-date">{{ videoHistory.createdOn | date: "dd/MM/yyyy HH:mm" }}</p>
+    </div>
+    <div class="hint">
+      <span>
+        <mat-icon>info_outline</mat-icon>
+        When downloading this video you've selected {{ videoHistory.qualityLabel }} quality
+        {{
+          videoHistory.bitrateInKilobytesPerSecond
+            ? "and " + videoHistory.bitrateInKilobytesPerSecond!.toFixed() + " kbps bitrate"
+            : ""
+        }}
+      </span>
+    </div>
+  </mat-card>
+
+  <mat-card class="history-grid" *ngIf="videoHistoryLoading$ | async">
+    <app-video-preview-skeleton-loader class="video-preview"></app-video-preview-skeleton-loader>
+  </mat-card>
+</div>

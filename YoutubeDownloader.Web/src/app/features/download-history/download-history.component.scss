@@ -1,0 +1,23 @@
+@import "variables";
+
+::ng-deepmat-tab-group.top-50px {
+  .mat-tab-header {
+    top: 50px;
+  }
+}
+
+::ng-deep.dark-theme {
+  mat-tab-group.sticky {
+    .mat-tab-header {
+      background-color: lighten($background-dark, 4);
+    }
+  }
+}
+
+::ng-deep.light-theme {
+  mat-tab-group.sticky {
+    .mat-tab-header {
+      background-color: darken($background-light, 10);
+    }
+  }
+}

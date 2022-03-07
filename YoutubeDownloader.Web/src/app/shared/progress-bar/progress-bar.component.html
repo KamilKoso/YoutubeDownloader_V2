@@ -1,0 +1,6 @@
+<div class="progress-bar-wrapper">
+  <div class="progress-bar" [style.width]="progress + '%'" [style.height]="height"></div>
+  <span *ngIf="mode === 'text-percent'" class="percentage">{{ progressBarText! + progress.toFixed(0) + "%" }}</span>
+  <span *ngIf="mode === 'text'" class="percentage">{{ progressBarText }}</span>
+  <span *ngIf="mode === 'percent'" class="percentage">{{ progress.toFixed(2) + "%" }}</span>
+</div>
